@@ -1,0 +1,386 @@
+[
+  
+  {
+    "name": "Rect Plate 4 Corner Holes",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Corner Hole Offset X", "default": 0.8 },
+      { "shortName": "D", "name": "Corner Hole Offset Y", "default": 0.8 },
+      { "shortName": "E", "name": "Corner Hole Diameter", "default": 0.4 },
+      { "shortName": "F", "name": "Inner Hole Offset X", "default": 4 },
+      { "shortName": "G", "name": "Inner Hole Offset Y", "default": 3 },
+      { "shortName": "H", "name": "Inner Hole Diameter", "default": 2 },
+      { "shortName": "I", "name": "Corner Radius", "default": 0 }
+    ],
+    "dependencies": {
+      "A_minus_I": "{A} - {I}",
+      "B_minus_I": "{B} - {I}",
+      "A_minus_C": "{A} - {C}",
+      "B_minus_D": "{B} - {D}",
+      "E_half": "{E} / 2",
+      "H_half": "{H} / 2"
+    },
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='max-width:100%;max-height:100vh;' viewBox='0 0 {A} {B}' preserveAspectRatio='xMidYMid meet' version='1.1' height='100%' width='100%' id='svgMain' xmlns:ip='http://www.iplaser.com/shapeMate' xmlns='http://www.w3.org/2000/svg'><defs xmlns='http://www.w3.org/2000/svg'></defs><g xmlns='http://www.w3.org/2000/svg' id='all' transform='translate(0,{B}) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M {I} 0.00 L {A_minus_I} 0.00 A{I},{I} 0  0,1 {A},{I}  L {A} {B_minus_I} A{I},{I} 0  0,1 {A_minus_I},{B}  L {I} {B} A{I},{I} 0  0,1 0.00,{B_minus_I}  L 0.00 {I} A{I},{I} 0  0,1 {I},0.00  '></path><circle fill='white' class='inner' cx='{C}' cy='{D}' r='{E_half}'></circle><circle fill='white' class='inner' cx='{A_minus_C}' cy='{D}' r='{E_half}'></circle><circle fill='white' class='inner' cx='{A_minus_C}' cy='{B_minus_D}' r='{E_half}'></circle><circle fill='white' class='inner' cx='{C}' cy='{B_minus_D}' r='{E_half}'></circle><circle fill='white' class='inner' cx='{F}' cy='{G}' r='{H_half}'></circle><g id='engrave' fill='black' stroke='none'></g></g></svg>"
+  },
+  
+ {
+    "name": "Arc Bracket",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 540 },
+      { "shortName": "B", "name": "Height", "default": 130 },
+      { "shortName": "C", "name": "Arc Radius", "default": 112 },
+      { "shortName": "D", "name": "Corner Width", "default": 75 },
+      { "shortName": "E", "name": "Corner Height", "default": 23 }
+    ],
+    "dependencies": {},
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='width:100%;height:100%;' viewBox='0 0 {A} {B}' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg'><defs><marker id='ArrowEnd-5' viewBox='0 0 10 6' refX='10' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim' d='M 0 0 L 10 3 L 0 6 z'></path></marker><marker id='ArrowStart-5' viewBox='0 0 10 6' refX='0' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim' d='M 10 0 L 0 3 L 10 6 z'></path></marker><marker id='HoverArrowEnd-5' viewBox='0 0 10 6' refX='10' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim' d='M 0 0 L 10 3 L 0 6 z'></path></marker><marker id='HoverArrowStart-5' viewBox='0 0 10 6' refX='0' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim' d='M 10 0 L 0 3 L 10 6 z'></path></marker><marker id='SelectedArrowEnd' viewBox='0 0 10 6' refX='10' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim selectedDim' d='M 0 0 L 10 3 L 0 6 z'></path></marker><marker id='SelectedArrowStart' viewBox='0 0 10 6' refX='0' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim selectedDim' d='M 10 0 L 0 3 L 10 6 z'></path></marker></defs><g id='all' transform='translate(0,{B}) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M 0.00 0.00 L {(A/2)-C} 0.00 A{C},{C} 0 1,0 {(A/2)+C} 0.00 L {A} 0.00 L {A} {(B-E)} L {(A-D)} {B} L {D} {B} L 0.00 {(B-E)} L 0.00 0.00 '></path><g id='engrave' fill='black' stroke='none'></g><g font-size='{B/10}' fill='black'><g id='dim_dx' class='Dim' fill='' stroke='' stroke-width='0.25%'><line x1='0.00' y1='0.00' x2='0.00' y2='{-B/2.22}'></line><line x1='{A}' y1='0.00' x2='{A}' y2='{-B/2.22}'></line><line class='arrowHeadStart arrowHeadEnd' x1='0.00' y1='{-B/3}' x2='{A}' y2='{-B/3}' marker-start='url(#ArrowStart-5)' marker-end='url(#ArrowEnd-5)'></line><text transform='rotate(0.0000,{A/2},{-B/3}) scale(1,-1) translate(0,{B/1.28})' text-anchor='middle' x='{A/2}' y='{-B/3}' dx='2.50' dy='-17.47'>A</text></g><g id='dim_dy' class='Dim' fill='' stroke='' stroke-width='0.25%'><line x1='0.00' y1='0.00' x2='{-B/2.22}' y2='0.00'></line><line x1='{D}' y1='{B}' x2='{-B/2.22}' y2='{B}'></line><line class='arrowHeadStart arrowHeadEnd' x1='{-B/3}' y1='0.00' x2='{-B/3}' y2='{B}' marker-start='url(#ArrowStart-5)' marker-end='url(#ArrowEnd-5)'></line><text transform='rotate(90.0000,{-B/3},{B/2}) scale(1,-1) translate(0,{-B/1.28})' text-anchor='middle' x='{-B/3}' y='{B/2}' dx='2.50' dy='-17.47'>B</text></g><g id='dim_ar' class='Dim' fill='' stroke='' stroke-width='0.25%'><line x1='{(A/2)-C}' y1='{C}' x2='{A/2}' y2='0.00'></line><line class='arrowHeadStart' x1='{(A/2)-C}' y1='{C}' x2='{(A/2)-(C*1.67)}' y2='{B/1.5}' marker-start='url(#ArrowStart-5)'></line><text transform='rotate(-45.0000,{(A/2)-(C*1.67)},{B/1.5}) scale(1,-1) translate(0,{-B*1.45})' text-anchor='start' x='{(A/2)-(C*1.67)}' y='{B/1.5}' dx='2.50' dy='-17.47'>C</text></g><g id='dim_dcx' class='Dim' fill='' stroke='' stroke-width='0.25%'><line x1='{A-D}' y1='{B}' x2='{A-D}' y2='{B*1.45}'></line><line x1='{A}' y1='{B-E}' x2='{A}' y2='{B*1.45}'></line><line class='arrowHeadStart arrowHeadEnd' x1='{A-D}' y1='{B*1.25}' x2='{A}' y2='{B*1.25}' marker-start='url(#ArrowStart-5)' marker-end='url(#ArrowEnd-5)'></line><text transform='rotate(0.0000,{A-(D/2)},{B*1.25}) scale(1,-1) translate(0,{-B*1.45})' text-anchor='middle' x='{A-(D/2)}' y='{B*1.25}' dx='2.50' dy='-17.47'>D</text></g><g id='dim_dcy' class='Dim' fill='' stroke='' stroke-width='0.25%'><line x1='{A}' y1='{B-E}' x2='{A+(B/4.6)}' y2='{B-E}'></line><line x1='{A-D}' y1='{B}' x2='{A+(B/4.6)}' y2='{B}'></line><line class='arrowHeadStart arrowHeadEnd' x1='{A+(B/4.6)}' y1='{B-E}' x2='{A+(B/4.6)}' y2='{B}' marker-start='url(#ArrowStart-5)' marker-end='url(#ArrowEnd-5)'></line><text transform='rotate(90.0000,{A+(B/4.6)},{(B+E)/2}) scale(1,-1) translate(0,{-B*1.45})' text-anchor='middle' x='{A+(B/4.6)}' y='{(B+E)/2}' dx='2.50' dy='-17.47'>E</text></g></g></g></svg>"
+    },
+  {
+    "name": "Gusset",
+    "parameters": [
+      { "shortName": "width", "name": "Width", "default": 200 },
+      { "shortName": "height", "name": "Height", "default": 150 },
+      { "shortName": "cornerFlatX", "name": "Corner Flat X", "default": 40 },
+      { "shortName": "cornerFlatY", "name": "Corner Flat Y", "default": 20 },
+      { "shortName": "cornerRadius", "name": "Corner Radius", "default": 100 }
+    ],
+    "dependencies": {},
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='width:100%;height:90vh;' viewBox='-43.00 -30.50 286.00 286.00' preserveAspectRatio='xMidYMid meet' version='1.1' height='200px' width='200px' id='svgMain' xmlns='http://www.w3.org/2000/svg'><defs></defs><g id='all' transform='translate(0,187.50) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M {cornerRadius} 0.00 L {width} 0.00 L {width} {cornerFlatY} L {cornerFlatX} {height} L 0.00 {height} L 0.00 {cornerRadius} A {cornerRadius} {cornerRadius} 0 0 0 {cornerRadius} 0.00 '></path><g id='engrave' fill='black' stroke='none'></g></g></svg>"
+  },
+  {
+    "name": "Gusset Chamfer",
+    "parameters": [
+      { "shortName": "width", "name": "Width", "default": 200 },
+      { "shortName": "height", "name": "Height", "default": 150 },
+      { "shortName": "cornerFlatX", "name": "Corner Flat X", "default": 40 },
+      { "shortName": "cornerFlatY", "name": "Corner Flat Y", "default": 20 },
+      { "shortName": "cornerFlatDiagonal", "name": "Corner Flat Diagonal", "default": 40 }
+    ],
+    "dependencies": {
+      "correctedCornerFlatDiagonal": "{cornerFlatDiagonal} - 11.72"
+    },
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='width:100%;height:90vh;' viewBox='-43.00 -30.50 286.00 286.00' preserveAspectRatio='xMidYMid meet' version='1.1' height='200px' width='200px' id='svgMain' xmlns='http://www.w3.org/2000/svg'><defs></defs><g id='all' transform='translate(0,187.50) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M {correctedCornerFlatDiagonal} 0.00 L {width} 0.00 L {width} {cornerFlatY} L {cornerFlatX} {height} L 0.00 {height} L 0.00 {correctedCornerFlatDiagonal} L {correctedCornerFlatDiagonal} 0.00 '></path><g id='engrave' fill='black' stroke='none'></g></g></svg>"
+  },
+  {
+    "name": "Gusset Chamfer Hole",
+    "parameters": [
+      { "shortName": "width", "name": "Width", "default": 200 },
+      { "shortName": "height", "name": "Height", "default": 150 },
+      { "shortName": "cornerFlatX", "name": "Corner Flat X", "default": 40 },
+      { "shortName": "cornerFlatY", "name": "Corner Flat Y", "default": 20 },
+      { "shortName": "cornerFlatDiagonal", "name": "Corner Flat Diagonal", "default": 40 },
+      { "shortName": "holeOffsetX", "name": "Hole Offset X", "default": 60 },
+      { "shortName": "holeOffsetY", "name": "Hole Offset Y", "default": 60 },
+      { "shortName": "holeDiameter", "name": "Hole Diameter", "default": 30 }
+    ],
+    "dependencies": {
+      "holeRadius": "{holeDiameter} / 2",
+      "correctedCornerFlatDiagonal": "{cornerFlatDiagonal} - 11.72"
+    },
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='width:100%;height:90vh;' viewBox='-43.00 -30.50 286.00 286.00' preserveAspectRatio='xMidYMid meet' version='1.1' height='200px' width='200px' id='svgMain' xmlns='http://www.w3.org/2000/svg'><defs></defs><g id='all' transform='translate(0,187.50) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M {correctedCornerFlatDiagonal} 0.00 L {width} 0.00 L {width} {cornerFlatY} L {cornerFlatX} {height} L 0.00 {height} L 0.00 {correctedCornerFlatDiagonal} L {correctedCornerFlatDiagonal} 0.00 '></path><circle fill='white' class='inner' cx='{holeOffsetX}' cy='{holeOffsetY}' r='{holeRadius}'></circle><g id='engrave' fill='black' stroke='none'></g></g></svg>"
+  },
+  {
+    "name": "Isosceles Triangle",
+    "parameters": [
+      { "shortName": "width", "name": "Width", "default": 200 },
+      { "shortName": "height", "name": "Height", "default": 150 }
+    ],
+    "dependencies": {},
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='width:100%;height:90vh;' viewBox='0 0 {width} {height}' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg'><defs></defs><g id='all' transform='translate(0,{height}) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M 0 0 L {width} 0 L {width / 2} {height} L 0 0' /><g id='engrave' fill='black' stroke='none'></g></g></svg>"
+  },
+  {
+    "name": "Lug Right Oblique",
+    "parameters": [
+      { "shortName": "width", "name": "Width", "default": 200 },
+      { "shortName": "holeDiameter", "name": "Hole Diameter", "default": 20 },
+      { "shortName": "centreY", "name": "Centre Y", "default": 150 },
+      { "shortName": "topRadius", "name": "Top Radius", "default": 50 }
+    ],
+    "dependencies": {
+      "adjustedX": "91.60 - (0.128 * ({width} - 200)) + (2.19025 * (Math.abs({topRadius}) - 50))",
+      "adjustedY": "177.74 + (0.88467 * ({centreY} - 150))",
+      "adjustedTopRadius": "Math.abs({topRadius})",
+      "adjustedCentreY": "{centreY}",
+      "adjustedHoleDiameter": "{holeDiameter} / 2",
+      "adjustedCircleCx": "50.00 + (1 * ({topRadius} - 50))",
+      "arcSweepFlag": "{topRadius} < 0 ? 1 : 0"
+    },
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='width:100%;height:90vh;' viewBox='-43.00 -5.50 286.00 286.00' preserveAspectRatio='xMidYMid meet' version='1.1' height='200px' width='200px' id='svgMain' xmlns='http://www.w3.org/2000/svg'><g id='all' transform='translate(0,237.50) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M 0.00 0.00 L {width} 0.00 L {adjustedX} {adjustedY} A{adjustedTopRadius},{adjustedTopRadius} 0 {arcSweepFlag},1 0.00,{adjustedCentreY} L 0.00 0.00'></path><circle fill='white' class='inner' cx='{adjustedCircleCx}' cy='{adjustedCentreY}' r='{adjustedHoleDiameter}'></circle></g></svg>"
+  },{
+    "name": "Trapezium",
+    "parameters": [
+      { "shortName": "width", "name": "Width", "default": 200 },
+      { "shortName": "topWidth", "name": "Top Width", "default": 75 },
+      { "shortName": "height", "name": "Height", "default": 100 }
+    ],
+    "dependencies": {
+      "bottomWidth": "{width}",
+      "halfTopWidth": "{topWidth} / 2",
+      "halfBottomWidth": "{width} / 2",
+      "x1": "0",
+      "y1": "0",
+      "x2": "{width}",
+      "y2": "0",
+      "x3": "{halfBottomWidth} + {halfTopWidth}",
+      "y3": "{height}",
+      "x4": "{halfBottomWidth} - {halfTopWidth}",
+      "y4": "{height}"
+    },
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='width:100%;height:30vh;' viewBox='-43.00 -55.50 286.00 286.00' preserveAspectRatio='xMidYMid meet' version='1.1' height='200px' width='200px' id='svgMain' xmlns='http://www.w3.org/2000/svg'><g id='all' transform='translate(0,{height + 37.5}) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M {x1} {y1} L {x2} {y2} L {x3} {y3} L {x4} {y4} L {x1} {y1}' /><g id='engrave' fill='black' stroke='none'></g></g></svg>"
+  }
+  
+  
+  
+  ,
+  {
+    "name": "TricCirc",
+    "parameters": [
+      { "shortName": "width", "name": "Width", "default": 200 },
+      { "shortName": "topRadius", "name": "Top Radius", "default": 50 },
+      { "shortName": "arcCentreHeight", "name": "Arc Centre Height", "default": 100 },
+      { "shortName": "height", "name": "Height", "default": 100 }
+    ],
+    "dependencies": {
+      "midpoint": "{width} / 2",
+      "distanceFromCenter": "Math.sqrt(Math.pow({topRadius}, 2) - Math.pow({arcCentreHeight} - {height}, 2))",
+      "arcStartX": "{midpoint} + {distanceFromCenter}",
+      "arcStartY": "{height}",
+      "arcEndX": "{midpoint} - {distanceFromCenter}",
+      "arcEndY": "{height}"
+    },
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='width:100%;height:90vh;' viewBox='0 0 {width} {height + topRadius}' preserveAspectRatio='xMidYMid meet' version='1.1' id='svgMain' xmlns='http://www.w3.org/2000/svg'><g id='all' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M 0 0 L {width} 0 L {arcStartX.toFixed(2)} {arcStartY} A {topRadius} {topRadius} 0 1 0 {arcEndX.toFixed(2)} {arcEndY} L 0 0' /><circle class='construction' cx='{width / 2}' cy='{arcCentreHeight}' r='{topRadius}'></circle><g id='engrave' fill='black' stroke='none'></g></g></svg>"
+  }
+
+,
+ 
+  {
+    "name": "Rect Plate 4 Corner Holes",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Corner Hole Offset X", "default": 0.8 },
+      { "shortName": "D", "name": "Corner Hole Offset Y", "default": 0.8 },
+      { "shortName": "E", "name": "Corner Hole Diameter", "default": 0.4 },
+      { "shortName": "F", "name": "Inner Hole Offset X", "default": 4 },
+      { "shortName": "G", "name": "Inner Hole Offset Y", "default": 3 },
+      { "shortName": "H", "name": "Inner Hole Diameter", "default": 2 },
+      { "shortName": "I", "name": "Corner Radius", "default": 0 }
+    ],
+    "dependencies": {
+      "A_minus_I": "{A} - {I}",
+      "B_minus_I": "{B} - {I}",
+      "A_minus_C": "{A} - {C}",
+      "B_minus_D": "{B} - {D}",
+      "E_half": "{E} / 2",
+      "H_half": "{H} / 2"
+    },
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='max-width:100%;max-height:100vh;' viewBox='0 0 {A} {B}' preserveAspectRatio='xMidYMid meet' version='1.1' height='100%' width='100%' id='svgMain' xmlns:ip='http://www.iplaser.com/shapeMate' xmlns='http://www.w3.org/2000/svg'><defs xmlns='http://www.w3.org/2000/svg'></defs><g xmlns='http://www.w3.org/2000/svg' id='all' transform='translate(0,{B}) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M {I} 0.00 L {A_minus_I} 0.00 A{I},{I} 0  0,1 {A},{I}  L {A} {B_minus_I} A{I},{I} 0  0,1 {A_minus_I},{B}  L {I} {B} A{I},{I} 0  0,1 0.00,{B_minus_I}  L 0.00 {I} A{I},{I} 0  0,1 {I},0.00  '></path><circle fill='white' class='inner' cx='{C}' cy='{D}' r='{E_half}'></circle><circle fill='white' class='inner' cx='{A_minus_C}' cy='{D}' r='{E_half}'></circle><circle fill='white' class='inner' cx='{A_minus_C}' cy='{B_minus_D}' r='{E_half}'></circle><circle fill='white' class='inner' cx='{C}' cy='{B_minus_D}' r='{E_half}'></circle><circle fill='white' class='inner' cx='{F}' cy='{G}' r='{H_half}'></circle><g id='engrave' fill='black' stroke='none'></g></g></svg>"
+  },
+  {
+    "name": "Rect Plate 2 Bolt Holes",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Hole Offset X", "default": 2 },
+      { "shortName": "D", "name": "Hole Offset Y", "default": 3 },
+      { "shortName": "E", "name": "Hole Spacing", "default": 3 },
+      { "shortName": "F", "name": "Hole Diameter", "default": 0.8 },
+      { "shortName": "G", "name": "Corner Radius", "default": 0 }
+    ],
+    "dependencies": {
+      "A_minus_G": "{A} - {G}",
+      "B_minus_G": "{B} - {G}",
+      "C_plus_E": "{C} + {E}",
+      "F_half": "{F} / 2"
+    },
+    "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='max-width:100%;max-height:100vh;' viewBox='0 0 {A} {B}' preserveAspectRatio='xMidYMid meet' version='1.1' height='100%' width='100%' id='svgMain' xmlns:ip='http://www.iplaser.com/shapeMate' xmlns='http://www.w3.org/2000/svg'><defs xmlns='http://www.w3.org/2000/svg'></defs><g xmlns='http://www.w3.org/2000/svg' id='all' transform='translate(0,{B}) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M {G} 0.00 L {A_minus_G} 0.00 A{G},{G} 0  0,1 {A},{G}  L {A} {B_minus_G} A{G},{G} 0  0,1 {A_minus_G},{B}  L {G} {B} A{G},{G} 0  0,1 0.00,{B_minus_G}  L 0.00 {G} A{G},{G} 0  0,1 {G},0.00  '></path><circle fill='white' class='inner' cx='{C}' cy='{D}' r='{F_half}'></circle><circle fill='white' class='inner' cx='{C_plus_E}' cy='{D}' r='{F_half}'></circle><g id='engrave' fill='black' stroke='none'></g></g></svg>"
+  },
+  {
+    "name": "Rect 3 Holes Per Side Id",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Edge hole offset x", "default": 0.8 },
+      { "shortName": "D", "name": "Edge hole offset y", "default": 0.8 },
+      { "shortName": "E", "name": "Edge hole dia", "default": 0.4 },
+      { "shortName": "F", "name": "Inner hole offset x", "default": 4 },
+      { "shortName": "G", "name": "Inner hole offset y", "default": 3 },
+      { "shortName": "H", "name": "Inner hole dia", "default": 2 },
+      { "shortName": "I", "name": "Corner radius", "default": 0 }
+    ],
+    "dependencies": {
+      "A_minus_C": "{A} - {C}",
+      "B_minus_D": "{B} - {D}",
+      "A_half": "{A} / 2",
+      "B_half": "{B} / 2",
+      "E_half": "{E} / 2",
+      "H_half": "{H} / 2"
+    },
+    "svgContent": "<svg class=\"injected-svg partViewerSvgNqp\" style=\"width:100%;height:90vh;\" viewBox=\"0 0 {A} {B}\" preserveAspectRatio=\"xMidYMid meet\" version=\"1.1\" height=\"200px\" width=\"200px\" id=\"svgMain\" xmlns:ip=\"http://www.iplaser.com/shapeMate\" xmlns=\"http://www.w3.org/2000/svg\"><defs xmlns=\"http://www.w3.org/2000/svg\"><marker id=\"ArrowEnd-1\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"ArrowStart-1\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker><marker id=\"HoverArrowEnd-1\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"HoverArrowStart-1\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker></defs><g xmlns=\"http://www.w3.org/2000/svg\" id=\"all\" transform=\"translate(0,{B}) scale(1,-1) \" stroke-width=\"0.25%\" stroke=\"black\" fill=\"none\"><rect fill=\"#E9E9F0\" x=\"0\" y=\"0\" width=\"{A}\" height=\"{B}\" rx=\"{I}\" ry=\"{I}\"/><circle fill=\"white\" class=\"inner\" cx=\"{C}\" cy=\"{D}\" r=\"{E_half}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{A_minus_C}\" cy=\"{D}\" r=\"{E_half}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{A_minus_C}\" cy=\"{B_minus_D}\" r=\"{E_half}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{C}\" cy=\"{B_minus_D}\" r=\"{E_half}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{A_half}\" cy=\"{B_minus_D}\" r=\"{E_half}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{A_half}\" cy=\"{D}\" r=\"{E_half}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{A_minus_C}\" cy=\"{B_half}\" r=\"{E_half}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{C}\" cy=\"{B_half}\" r=\"{E_half}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{F}\" cy=\"{G}\" r=\"{H_half}\"></circle></g></svg>"
+  },
+  {
+    "name": "Plain Rectangular Plate",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Corner radius", "default": 0 }
+    ],
+    "dependencies": {},
+    "svgContent": "<svg class=\"injected-svg partViewerSvgNqp\" style=\"width:100%;height:90vh;\" viewBox=\"0 0 {A} {B}\" preserveAspectRatio=\"xMidYMid meet\" version=\"1.1\" height=\"200px\" width=\"200px\" id=\"svgMain\" xmlns:ip=\"http://www.iplaser.com/shapeMate\" xmlns=\"http://www.w3.org/2000/svg\"><defs xmlns=\"http://www.w3.org/2000/svg\"><marker id=\"ArrowEnd-1\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"ArrowStart-1\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker><marker id=\"HoverArrowEnd-1\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"HoverArrowStart-1\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker></defs><g xmlns=\"http://www.w3.org/2000/svg\" id=\"all\" transform=\"translate(0,{B}) scale(1,-1) \" stroke-width=\"0.25%\" stroke=\"black\" fill=\"none\"><rect fill=\"#E9E9F0\" x=\"0\" y=\"0\" width=\"{A}\" height=\"{B}\" rx=\"{C}\" ry=\"{C}\"/><g id=\"engrave\" fill=\"black\" stroke=\"none\"></g></g></svg>"
+  },
+  {
+    "name": "Rect Plate with Centre Hole",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Hole offset X", "default": 4 },
+      { "shortName": "D", "name": "Hole offset Y", "default": 3 },
+      { "shortName": "E", "name": "Hole diameter", "default": 0.8 },
+      { "shortName": "F", "name": "Corner radius", "default": 0 }
+    ],
+    "dependencies": {
+      "holeRadius": "{E} / 2"
+    },
+    "svgContent": "<svg class=\"injected-svg partViewerSvgNqp\" style=\"width:100%;height:90vh;\" viewBox=\"0 0 {A} {B}\" preserveAspectRatio=\"xMidYMid meet\" version=\"1.1\" height=\"200px\" width=\"200px\" id=\"svgMain\" xmlns:ip=\"http://www.iplaser.com/shapeMate\" xmlns=\"http://www.w3.org/2000/svg\"><defs xmlns=\"http://www.w3.org/2000/svg\"><marker id=\"ArrowEnd-1\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"ArrowStart-1\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker><marker id=\"HoverArrowEnd-1\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"HoverArrowStart-1\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker></defs><g xmlns=\"http://www.w3.org/2000/svg\" id=\"all\" transform=\"translate(0,{B}) scale(1,-1) \" stroke-width=\"0.25%\" stroke=\"black\" fill=\"none\"><rect fill=\"#E9E9F0\" x=\"0\" y=\"0\" width=\"{A}\" height=\"{B}\" rx=\"{F}\" ry=\"{F}\"/><circle fill=\"white\" class=\"inner\" cx=\"{C}\" cy=\"{D}\" r=\"{holeRadius}\"></circle></g></svg>"
+  },
+  {
+    "name": "Rect Plate with 4 Slots and Centre Hole",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Inner hole offset X", "default": 4 },
+      { "shortName": "D", "name": "Inner hole offset Y", "default": 3 },
+      { "shortName": "E", "name": "Hole diameter", "default": 0.8 },
+      { "shortName": "F", "name": "Slot offset X", "default": 1.2 },
+      { "shortName": "G", "name": "Slot offset Y", "default": 0.8 },
+      { "shortName": "H", "name": "Slot width", "default": 0.4 },
+      { "shortName": "I", "name": "Slot length", "default": 0.8 },
+      { "shortName": "J", "name": "Corner radius", "default": 0.4 }
+    ],
+    "dependencies": {
+      "holeRadius": "({E} / 2)",
+      "slotHalfWidth": "({H} / 2)",
+      "slotHalfLength": "({I} / 2)",
+      "A_minus_F_minus_H": "({A} - {F} - ({I} / 2))",
+      "A_minus_F_plus_H": "({A} - {F} + ({I} / 2))",
+      "B_minus_G_minus_I": "({B} - {G} - ({H} / 2))",
+      "B_minus_G_plus_I": "({B} - {G} + ({H} / 2))",
+      "F_plus_H": "({F} + ({I} / 2))",
+      "F_minus_H": "({F} - ({I} / 2))",
+      "G_minus_I": "({G} - ({H} / 2))",
+      "G_plus_I": "({G} + ({H} / 2))"
+    },
+    "svgContent": "<svg class=\"injected-svg partViewerSvgNqp\" style=\"width:100%;height:90vh;\" viewBox=\"-1.72 -1.22 11.44 11.44\" preserveAspectRatio=\"xMidYMid meet\" version=\"1.1\" height=\"200px\" width=\"200px\" id=\"svgMain\" xmlns:ip=\"http://www.iplaser.com/shapeMate\" xmlns=\"http://www.w3.org/2000/svg\"><defs xmlns=\"http://www.w3.org/2000/svg\"><marker id=\"ArrowEnd-1\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"ArrowStart-1\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker><marker id=\"HoverArrowEnd-1\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"HoverArrowStart-1\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker></defs><g xmlns=\"http://www.w3.org/2000/svg\" id=\"all\" transform=\"translate(0,{B}) scale(1,-1) \" stroke-width=\"0.25%\" stroke=\"black\" fill=\"none\"><rect fill=\"#E9E9F0\" x=\"0\" y=\"0\" width=\"{A}\" height=\"{B}\" rx=\"{J}\" ry=\"{J}\"/><circle fill=\"white\" class=\"inner\" cx=\"{C}\" cy=\"{D}\" r=\"{holeRadius}\"></circle><path fill=\"white\" class=\"inner\" d=\"M {F_minus_H} {G_plus_I} L {F_plus_H} {G_plus_I} A{slotHalfWidth},{slotHalfWidth} 0  1,0 {F_plus_H},{G_minus_I}  L {F_minus_H} {G_minus_I} A{slotHalfWidth},{slotHalfWidth} 0  1,0 {F_minus_H} {G_plus_I} \"></path><path fill=\"white\" class=\"inner\" d=\"M {A_minus_F_minus_H} {G_plus_I} L {A_minus_F_plus_H} {G_plus_I} A{slotHalfWidth},{slotHalfWidth} 0  1,0 {A_minus_F_plus_H},{G_minus_I}  L {A_minus_F_minus_H} {G_minus_I} A{slotHalfWidth},{slotHalfWidth} 0  1,0 {A_minus_F_minus_H} {G_plus_I} \"></path><path fill=\"white\" class=\"inner\" d=\"M {A_minus_F_minus_H} {B_minus_G_plus_I} L {A_minus_F_plus_H} {B_minus_G_plus_I} A{slotHalfWidth},{slotHalfWidth} 0  1,0 {A_minus_F_plus_H},{B_minus_G_minus_I}  L {A_minus_F_minus_H} {B_minus_G_minus_I} A{slotHalfWidth},{slotHalfWidth} 0  1,0 {A_minus_F_minus_H} {B_minus_G_plus_I} \"></path><path fill=\"white\" class=\"inner\" d=\"M {F_minus_H} {B_minus_G_plus_I} L {F_plus_H} {B_minus_G_plus_I} A{slotHalfWidth},{slotHalfWidth} 0  1,0 {F_plus_H},{B_minus_G_minus_I}  L {F_minus_H} {B_minus_G_minus_I} A{slotHalfWidth},{slotHalfWidth} 0  1,0 {F_minus_H} {B_minus_G_plus_I} \"></path></g></svg>"
+  },
+  {
+    "name": "Plate 2 Slots Vert",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Slot offset X", "default": 2 },
+      { "shortName": "D", "name": "Slot offset Y", "default": 2 },
+      { "shortName": "E", "name": "Slot width", "default": 0.8 },
+      { "shortName": "F", "name": "Slot length", "default": 0.8 },
+      { "shortName": "G", "name": "Corner radius", "default": 0 }
+    ],
+    "dependencies": {
+      "slotHalfWidth": "{E} / 2",
+      "slotHalfLength": "{F} / 2",
+      "A_minus_C_minus_F": "{A} - {C} - ({F} / 2)",
+      "A_minus_C_plus_F": "{A} - {C} + ({F} / 2)",
+      "B_minus_D_minus_E": "{B} - {D} - ({E} / 2)",
+      "B_minus_D_plus_E": "{B} - {D} + ({E} / 2)",
+      "C_plus_F": "{C} + ({F} / 2)",
+      "C_minus_F": "{C} - ({F} / 2)",
+      "D_minus_E": "{D} - ({E} / 2)",
+      "D_plus_E": "{D} + ({E} / 2)"
+    },
+    "svgContent": "<svg class=\"injected-svg partViewerSvgNqp\" style=\"width:100%;height:100%;\" viewBox=\"0 0 {A} {B}\" preserveAspectRatio=\"xMidYMid meet\" version=\"1.1\" height=\"100%\" width=\"100%\" id=\"svgMain\" xmlns:ip=\"http://www.iplaser.com/shapeMate\" xmlns=\"http://www.w3.org/2000/svg\"><defs xmlns=\"http://www.w3.org/2000/svg\"><marker id=\"ArrowEnd-110\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"ArrowStart-110\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker><marker id=\"HoverArrowEnd-110\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"HoverArrowStart-110\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker></defs><g xmlns=\"http://www.w3.org/2000/svg\" id=\"all\" transform=\"translate(0, {B}) scale(1,-1)\" stroke-width=\"0.25%\" stroke=\"black\" fill=\"none\"><rect fill=\"#E9E9F0\" x=\"0\" y=\"0\" width=\"{A}\" height=\"{B}\" rx=\"{G}\" ry=\"{G}\"></rect><path fill=\"white\" class=\"inner\" d=\"M {A_minus_C_minus_F} {D_plus_E} L {A_minus_C_plus_F} {D_plus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_plus_F} {D_minus_E} L {A_minus_C_minus_F} {D_minus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_minus_F} {D_plus_E} Z\"></path><path fill=\"white\" class=\"inner\" d=\"M {A_minus_C_minus_F} {B_minus_D_plus_E} L {A_minus_C_plus_F} {B_minus_D_plus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_plus_F} {B_minus_D_minus_E} L {A_minus_C_minus_F} {B_minus_D_minus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_minus_F} {B_minus_D_plus_E} Z\"></path></g></svg>"
+  },
+  {
+    "name": "Plate 2 Slots Horiz",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Slot offset X", "default": 2 },
+      { "shortName": "D", "name": "Slot offset Y", "default": 2 },
+      { "shortName": "E", "name": "Slot width", "default": 0.8 },
+      { "shortName": "F", "name": "Slot length", "default": 0.8 },
+      { "shortName": "G", "name": "Corner radius", "default": 0 }
+    ],
+    "dependencies": {
+      "slotHalfWidth": "{E} / 2",
+      "slotHalfLength": "{F} / 2",
+      "C_minus_F": "{C} - ({F} / 2)",
+      "C_plus_F": "{C} + ({F} / 2)",
+      "A_minus_C_minus_F": "{A} - {C} - ({F} / 2)",
+      "A_minus_C_plus_F": "{A} - {C} + ({F} / 2)",
+      "D_minus_E": "{D} - ({E} / 2)",
+      "D_plus_E": "{D} + ({E} / 2)"
+    },
+    "svgContent": "<svg class=\"injected-svg partViewerSvgNqp\" style=\"width:100%;height:100%;\" viewBox=\"0 0 {A} {B}\" preserveAspectRatio=\"xMidYMid meet\" version=\"1.1\" height=\"100%\" width=\"100%\" id=\"svgMain\" xmlns:ip=\"http://www.iplaser.com/shapeMate\" xmlns=\"http://www.w3.org/2000/svg\"><defs xmlns=\"http://www.w3.org/2000/svg\"><marker id=\"ArrowEnd-163\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"ArrowStart-163\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker><marker id=\"HoverArrowEnd-163\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"HoverArrowStart-163\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker></defs><g xmlns=\"http://www.w3.org/2000/svg\" id=\"all\" transform=\"translate(0, {B}) scale(1,-1)\" stroke-width=\"0.25%\" stroke=\"black\" fill=\"none\"><rect fill=\"#E9E9F0\" x=\"0\" y=\"0\" width=\"{A}\" height=\"{B}\" rx=\"{G}\" ry=\"{G}\"></rect><path fill=\"white\" class=\"inner\" d=\"M {C_minus_F} {D_plus_E} L {C_plus_F} {D_plus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {C_plus_F} {D_minus_E} L {C_minus_F} {D_minus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {C_minus_F} {D_plus_E} Z\"></path><path fill=\"white\" class=\"inner\" d=\"M {A_minus_C_minus_F} {D_plus_E} L {A_minus_C_plus_F} {D_plus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_plus_F} {D_minus_E} L {A_minus_C_minus_F} {D_minus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_minus_F} {D_plus_E} Z\"></path></g></svg>"
+  },
+  {
+    "name": "Rect Plate Rounded Corners, 4 holes, 4 slots",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Hole offset X", "default": 0.8 },
+      { "shortName": "D", "name": "Hole offset Y", "default": 1.6 },
+      { "shortName": "E", "name": "Hole diameter", "default": 0.4 },
+      { "shortName": "F", "name": "Slot offset X", "default": 2 },
+      { "shortName": "G", "name": "Slot offset Y", "default": 0.8 },
+      { "shortName": "H", "name": "Slot width", "default": 0.4 },
+      { "shortName": "I", "name": "Slot length", "default": 0.8 },
+      { "shortName": "J", "name": "Corner radius", "default": 0.4 }
+    ],
+    "dependencies": {
+      "holeRadius": "{E} / 2",
+      "slotHalfWidth": "{H} / 2",
+      "slotHalfLength": "{I} / 2",
+      "C_minus_HoleRadius": "{C} - ({E} / 2)",
+      "C_plus_HoleRadius": "{C} + ({E} / 2)",
+      "A_minus_C": "{A} - {C}",
+      "A_minus_C_minus_HoleRadius": "{A} - {C} - ({E} / 2)",
+      "A_minus_C_plus_HoleRadius": "{A} - {C} + ({E} / 2)",
+      "B_minus_D": "{B} - {D}",
+      "B_minus_D_minus_HoleRadius": "{B} - {D} - ({E} / 2)",
+      "B_minus_D_plus_HoleRadius": "{B} - {D} + ({E} / 2)",
+      "A_minus_F_minus_SlotHalfLength": "{A} - {F} - ({I} / 2)",
+      "A_minus_F_plus_SlotHalfLength": "{A} - {F} + ({I} / 2)",
+      "B_minus_G_minus_SlotHalfWidth": "{B} - {G} - ({H} / 2)",
+      "B_minus_G_plus_SlotHalfWidth": "{B} - {G} + ({H} / 2)",
+      "F_plus_SlotHalfLength": "{F} + ({I} / 2)",
+      "F_minus_SlotHalfLength": "{F} - ({I} / 2)",
+      "G_minus_SlotHalfWidth": "{G} - ({H} / 2)",
+      "G_plus_SlotHalfWidth": "{G} + ({H} / 2)"
+    },
+    "svgContent": "<svg class=\"injected-svg partViewerSvgNqp\" style=\"width:100%;height:100%;\" viewBox=\"0 0 {A} {B}\" preserveAspectRatio=\"xMidYMid meet\" version=\"1.1\" height=\"100%\" width=\"100%\" id=\"svgMain\" xmlns:ip=\"http://www.iplaser.com/shapeMate\" xmlns=\"http://www.w3.org/2000/svg\"><defs xmlns=\"http://www.w3.org/2000/svg\"><marker id=\"ArrowEnd-177\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"ArrowStart-177\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker><marker id=\"HoverArrowEnd-177\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"HoverArrowStart-177\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker></defs><g xmlns=\"http://www.w3.org/2000/svg\" id=\"all\" transform=\"translate(0, {B}) scale(1,-1)\" stroke-width=\"0.25%\" stroke=\"black\" fill=\"none\"><rect fill=\"#E9E9F0\" x=\"0\" y=\"0\" width=\"{A}\" height=\"{B}\" rx=\"{J}\" ry=\"{J}\"></rect><path fill=\"white\" class=\"inner\" d=\"M {F_minus_SlotHalfLength} {B_minus_G_plus_SlotHalfWidth} L {F_plus_SlotHalfLength} {B_minus_G_plus_SlotHalfWidth} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {F_plus_SlotHalfLength} {B_minus_G_minus_SlotHalfWidth} L {F_minus_SlotHalfLength} {B_minus_G_minus_SlotHalfWidth} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {F_minus_SlotHalfLength} {B_minus_G_plus_SlotHalfWidth} Z\"></path><path fill=\"white\" class=\"inner\" d=\"M {A_minus_F_minus_SlotHalfLength} {B_minus_G_plus_SlotHalfWidth} L {A_minus_F_plus_SlotHalfLength} {B_minus_G_plus_SlotHalfWidth} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_F_plus_SlotHalfLength} {B_minus_G_minus_SlotHalfWidth} L {A_minus_F_minus_SlotHalfLength} {B_minus_G_minus_SlotHalfWidth} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_F_minus_SlotHalfLength} {B_minus_G_plus_SlotHalfWidth} Z\"></path><path fill=\"white\" class=\"inner\" d=\"M {A_minus_F_minus_SlotHalfLength} {G_plus_SlotHalfWidth} L {A_minus_F_plus_SlotHalfLength} {G_plus_SlotHalfWidth} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_F_plus_SlotHalfLength} {G_minus_SlotHalfWidth} L {A_minus_F_minus_SlotHalfLength} {G_minus_SlotHalfWidth} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_F_minus_SlotHalfLength} {G_plus_SlotHalfWidth} Z\"></path><path fill=\"white\" class=\"inner\" d=\"M {F_minus_SlotHalfLength} {G_plus_SlotHalfWidth} L {F_plus_SlotHalfLength} {G_plus_SlotHalfWidth} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {F_plus_SlotHalfLength} {G_minus_SlotHalfWidth} L {F_minus_SlotHalfLength} {G_minus_SlotHalfWidth} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {F_minus_SlotHalfLength} {G_plus_SlotHalfWidth} Z\"></path><circle fill=\"white\" class=\"inner\" cx=\"{C}\" cy=\"{D}\" r=\"{holeRadius}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{A_minus_C}\" cy=\"{D}\" r=\"{holeRadius}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{A_minus_C}\" cy=\"{B_minus_D}\" r=\"{holeRadius}\"></circle><circle fill=\"white\" class=\"inner\" cx=\"{C}\" cy=\"{B_minus_D}\" r=\"{holeRadius}\"></circle></g></svg>"
+  },
+  {
+    "name": "Rect Plate 4 Slots",
+    "parameters": [
+      { "shortName": "A", "name": "Width", "default": 8 },
+      { "shortName": "B", "name": "Height", "default": 6 },
+      { "shortName": "C", "name": "Slot offset X", "default": 2 },
+      { "shortName": "D", "name": "Slot offset Y", "default": 2 },
+      { "shortName": "E", "name": "Slot width", "default": 0.8 },
+      { "shortName": "F", "name": "Slot length", "default": 0.8 },
+      { "shortName": "G", "name": "Corner radius", "default": 0 }
+    ],
+    "dependencies": {
+      "slotHalfWidth": "{E} / 2",
+      "slotHalfLength": "{F} / 2",
+      "A_minus_C_minus_F": "{A} - {C} - ({F} / 2)",
+      "A_minus_C_plus_F": "{A} - {C} + ({F} / 2)",
+      "B_minus_D_minus_E": "{B} - {D} - ({E} / 2)",
+      "B_minus_D_plus_E": "{B} - {D} + ({E} / 2)",
+      "C_plus_F": "{C} + ({F} / 2)",
+      "C_minus_F": "{C} - ({F} / 2)",
+      "D_minus_E": "{D} - ({E} / 2)",
+      "D_plus_E": "{D} + ({E} / 2)"
+    },
+    "svgContent": "<svg class=\"injected-svg partViewerSvgNqp\" style=\"width:100%;height:100%;\" viewBox=\"0 0 8 6\" preserveAspectRatio=\"xMidYMid meet\" version=\"1.1\" height=\"100%\" width=\"100%\" id=\"svgMain\" xmlns:ip=\"http://www.iplaser.com/shapeMate\" xmlns=\"http://www.w3.org/2000/svg\"><defs xmlns=\"http://www.w3.org/2000/svg\"><marker id=\"ArrowEnd-200\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"ArrowStart-200\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker><marker id=\"HoverArrowEnd-200\" viewBox=\"0 0 10 6\" refX=\"10\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 0 0 L 10 3 L 0 6 z\"></path></marker><marker id=\"HoverArrowStart-200\" viewBox=\"0 0 10 6\" refX=\"0\" refY=\"3\" markerUnits=\"strokeWidth\" markerWidth=\"10\" markerHeight=\"10\" orient=\"auto\"><path class=\"Dim\" d=\"M 10 0 L 0 3 L 10 6 z\"></path></marker></defs><g xmlns=\"http://www.w3.org/2000/svg\" id=\"all\" stroke-width=\"0.25%\" stroke=\"black\" fill=\"none\"><rect fill=\"#E9E9F0\" x=\"0\" y=\"0\" width=\"8\" height=\"6\" rx=\"{G}\" ry=\"{G}\"></rect><path fill=\"white\" class=\"inner\" d=\"M {C_minus_F} {B_minus_D_plus_E} L {C_plus_F} {B_minus_D_plus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {C_plus_F},{B_minus_D_minus_E}  L {C_minus_F} {B_minus_D_minus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {C_minus_F} {B_minus_D_plus_E} \"></path><path fill=\"white\" class=\"inner\" d=\"M {A_minus_C_minus_F} {B_minus_D_plus_E} L {A_minus_C_plus_F} {B_minus_D_plus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_plus_F},{B_minus_D_minus_E}  L {A_minus_C_minus_F} {B_minus_D_minus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_minus_F} {B_minus_D_plus_E} \"></path><path fill=\"white\" class=\"inner\" d=\"M {A_minus_C_minus_F} {D_plus_E} L {A_minus_C_plus_F} {D_plus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_plus_F},{D_minus_E}  L {A_minus_C_minus_F} {D_minus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {A_minus_C_minus_F} {D_plus_E} \"></path><path fill=\"white\" class=\"inner\" d=\"M {C_minus_F} {D_plus_E} L {C_plus_F} {D_plus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {C_plus_F},{D_minus_E}  L {C_minus_F} {D_minus_E} A{slotHalfWidth},{slotHalfWidth} 0 1,0 {C_minus_F} {D_plus_E} \"></path></g></svg>"
+  }
+]
