@@ -36,7 +36,7 @@ const DynamicSVG = ({ svgData }) => {
   };
 
   // Function to replace parameter placeholders with current values and resolve dependencies
-  const renderSVG = () => {
+  const renderSVGContent = () => {
     let svgContent = svgData.svgContent;
 
     // Resolve dependencies first
@@ -66,11 +66,13 @@ const DynamicSVG = ({ svgData }) => {
       }
     });
 
-    return { __html: svgContent };
+    return svgContent;
   };
 
+  const [svgContent, setSvgContent] = useState(renderSVGContent());
+
   useEffect(() => {
-    renderSVG();
+    setSvgContent(renderSVGContent());
   }, [params]);
 
   return (
@@ -78,7 +80,7 @@ const DynamicSVG = ({ svgData }) => {
       {/* Heading for the SVG */}
       <h2>{svgData.name}</h2>
       {/* Render the SVG */}
-      <div className="svg-wrapper" dangerouslySetInnerHTML={renderSVG()} />
+      <div className="svg-wrapper" dangerouslySetInnerHTML={{ __html: svgContent }} />
       {/* Render input fields for each parameter */}
       <div className="parameters">
         {svgData.parameters.map((param) => (
