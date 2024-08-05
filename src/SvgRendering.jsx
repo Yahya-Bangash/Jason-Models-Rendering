@@ -22,14 +22,15 @@ const DynamicSVG = ({ svgData }) => {
   };
 
   // Function to resolve dependencies and replace placeholders with calculated values
-  const resolveDependencies = (dependencies) => {
+  const resolveDependencies = (dependencies, params) => {
     const resolvedDependencies = {};
     for (const [key, expr] of Object.entries(dependencies)) {
-      const resolvedValue = expr.replace(/\{(\w+)\}/g, (_, p1) => params[p1] || resolvedDependencies[p1]);
+      const resolvedValue = expr.replace(/\{(\w+)\}/g, (_, p1) => params[p1] !== undefined ? params[p1] : resolvedDependencies[p1]);
       try {
         resolvedDependencies[key] = eval(resolvedValue);
       } catch (error) {
         console.error(`Error evaluating dependency: ${expr}`, error);
+        resolvedDependencies[key] = 0; // Default to 0 if there's an error in evaluation
       }
     }
     return resolvedDependencies;
@@ -40,7 +41,7 @@ const DynamicSVG = ({ svgData }) => {
     let svgContent = svgData.svgContent;
 
     // Resolve dependencies first
-    const resolvedDependencies = resolveDependencies(svgData.dependencies);
+    const resolvedDependencies = resolveDependencies(svgData.dependencies, params);
 
     // Replace all simple parameter placeholders
     for (const [key, value] of Object.entries(params)) {
