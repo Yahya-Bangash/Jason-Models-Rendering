@@ -16,7 +16,7 @@
   padding: 1rem;
   border-radius: 8px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,7 +27,7 @@
   align-items: center;
   margin-bottom: 1rem;
   width: 100%;
-  height: 200px; /* Set a fixed height for SVG */
+  height: 500px; /* Set a fixed height for SVG */
 }
 
 /* Container for parameter input fields, centers them and adds spacing */
