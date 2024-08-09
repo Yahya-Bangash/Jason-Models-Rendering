@@ -33,11 +33,47 @@ const DynamicSVG = ({ svgData }) => {
     return resolvedDependencies;
   };
 
+  const processLoops = (svgContent, loops, params, resolvedDependencies) => {
+    if (!loops) return svgContent;
+
+    loops.forEach(loop => {
+      let loopContent = '';
+      const loopCount = params[loop.countParam] !== undefined ? params[loop.countParam] : loop.count;
+
+      for (let i = 0; i < loopCount; i++) {
+        let itemContent = loop.template.replace(/\{i\}/g, i);
+
+        // Replace placeholders with actual values
+        itemContent = itemContent.replace(/\{([^}]+)\}/g, (_, expr) => {
+          const evalExpr = new Function('i', ...Object.keys(params), ...Object.keys(resolvedDependencies), `return ${expr};`);
+          try {
+            return evalExpr(i, ...Object.values(params), ...Object.values(resolvedDependencies));
+          } catch (error) {
+            console.error(`Error evaluating expression: ${expr}`, error);
+            return `{${expr}}`;
+          }
+        });
+
+        loopContent += itemContent;
+      }
+
+      // Replace the placeholder in the svgContent with generated loop content
+      const regex = new RegExp(`{${loop.name}}`, 'g');
+      svgContent = svgContent.replace(regex, loopContent);
+    });
+
+    return svgContent;
+  };
+
   const renderSVGContent = () => {
     let svgContent = svgData.svgContent;
 
-    const resolvedDependencies = resolveDependencies(svgData.dependencies, params);
+    const resolvedDependencies = resolveDependencies(svgData.dependencies || {}, params);
 
+    // Process loops if any
+    svgContent = processLoops(svgContent, svgData.loops || [], params, resolvedDependencies);
+
+    // Replace remaining placeholders with actual values
     for (const [key, value] of Object.entries(params)) {
       const regex = new RegExp(`\\{${key}\\}`, 'g');
       svgContent = svgContent.replace(regex, value);

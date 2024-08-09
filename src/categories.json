@@ -47,6 +47,7 @@
       }
     ]
   },
+
   {
     "mainCategory": "Flange",
     "subCategories": [
@@ -99,6 +100,71 @@
           "ViewBoxSize": "{A}"
         },
         "svgContent": "<svg class='injected-svg partViewerSvgNqp' style='width:100%;height:90vh;' viewBox='-43 -55.50 286 286' preserveAspectRatio='xMidYMid meet' version='1.1' height='200px' width='200px' id='svgMain' xmlns:ip='http://www.iplaser.com/shapeMate' xmlns='http://www.w3.org/2000/svg'><defs xmlns='http://www.w3.org/2000/svg'><marker id='ArrowEnd' viewBox='0 0 10 6' refX='10' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim' d='M 0 0 L 10 3 L 0 6 z'></path></marker><marker id='ArrowStart' viewBox='0 0 10 6' refX='0' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim' d='M 10 0 L 0 3 L 10 6 z'></path></marker></defs><g xmlns='http://www.w3.org/2000/svg' id='all' stroke-width='0.25%' stroke='black' fill='none'><circle fill='#E9E9F0' cx='0' cy='0' r='{OuterRadius}' /><circle fill='white' class='inner' cx='0' cy='0' r='{InnerRadius}' /><g id='engrave' fill='black' stroke='none' /></g></svg>"
+      },
+      {
+        "name": "Rect Flange Pcd Id",
+        "parameters": [
+          { "shortName": "A", "name": "Width", "default": 200 },
+          { "shortName": "B", "name": "Height", "default": 200 },
+          { "shortName": "C", "name": "Corner Radius", "default": 25 },
+          { "shortName": "D", "name": "Inside Diameter", "default": 100 },
+          {
+            "shortName": "E",
+            "name": "Outer Pitch Circle Diameter",
+            "default": 150
+          },
+          {
+            "shortName": "F",
+            "name": "Inner Pitch Circle Diameter",
+            "default": 100
+          },
+          {
+            "shortName": "G",
+            "name": "Outer Pitch Circle Rotation",
+            "default": 0
+          },
+          {
+            "shortName": "H",
+            "name": "Inner Pitch Circle Rotation",
+            "default": 0
+          },
+          {
+            "shortName": "I",
+            "name": "Outer Bolt Hole Diameter",
+            "default": 10
+          },
+          {
+            "shortName": "numOuterHoles",
+            "name": "Number of Outer Holes",
+            "default": 8
+          },
+          {
+            "shortName": "numInnerHoles",
+            "name": "Number of Inner Holes",
+            "default": 4
+          }
+        ],
+        "dependencies": {
+          "centerX": "{A} / 2",
+          "centerY": "{B} / 2",
+          "outerPitchRadius": "{E} / 2",
+          "innerPitchRadius": "{F} / 2",
+          "innerRadius": "{D} / 2",
+          "outerHoleRadius": "{I} / 2"
+        },
+        "loops": [
+          {
+            "name": "outerHoles",
+            "countParam": "numOuterHoles",
+            "template": "<circle key='outer-{i}' fill='white' cx='{centerX + outerPitchRadius * Math.cos((i * (360 / numOuterHoles) + G) * (Math.PI / 180))}' cy='{centerY + outerPitchRadius * Math.sin((i * (360 / numOuterHoles) + G) * (Math.PI / 180))}' r='{outerHoleRadius}' />"
+          },
+          {
+            "name": "innerHoles",
+            "countParam": "numInnerHoles",
+            "template": "<circle key='inner-{i}' fill='white' cx='{centerX + innerPitchRadius * Math.cos((i * (360 / numInnerHoles) + H) * (Math.PI / 180))}' cy='{centerY + innerPitchRadius * Math.sin((i * (360 / numInnerHoles) + H) * (Math.PI / 180))}' r='5' />"
+          }
+        ],
+        "svgContent": "<svg style='width:100%;height:90vh;' viewBox='-{A * 0.25} -{B * 0.25} {A * 1.5} {B * 1.5}' preserveAspectRatio='xMidYMid meet' version='1.1' height='200px' width='200px' xmlns='http://www.w3.org/2000/svg'><defs><marker id='ArrowEnd' viewBox='0 0 10 6' refX='10' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim' d='M 0 0 L 10 3 L 0 6 z'></path></marker><marker id='ArrowStart' viewBox='0 0 10 6' refX='0' refY='3' markerUnits='strokeWidth' markerWidth='10' markerHeight='10' orient='auto'><path class='Dim' d='M 10 0 L 0 3 L 10 6 z'></path></marker></defs><g id='all' transform='translate(0,{B * 1.1875}) scale(1,-1)' stroke-width='0.25%' stroke='black' fill='none'><path fill='#E9E9F0' d='M {C} 0 L {A - C} 0 A{C},{C} 0 0,1 {A},{C} L {A} {B - C} A{C},{C} 0 0,1 {A - C},{B} L {C} {B} A{C},{C} 0 0,1 0,{B - C} L 0 {C} A{C},{C} 0 0,1 {C},0' /><circle fill='white' class='inner' cx='{centerX}' cy='{centerY}' r='{innerRadius}' />{outerHoles}{innerHoles}<circle class='construction' cx='{centerX}' cy='{centerY}' r='{outerPitchRadius}' /><circle class='construction' cx='{centerX}' cy='{centerY}' r='{innerPitchRadius}' /><g id='engrave' fill='black' stroke='none'></g></g></svg>"
       }
     ]
   },
