@@ -22,16 +22,21 @@ const DynamicSVG = ({ svgData }) => {
   const resolveDependencies = (dependencies, params) => {
     const resolvedDependencies = {};
     for (const [key, expr] of Object.entries(dependencies)) {
-      const resolvedValue = expr.replace(/\{(\w+)\}/g, (_, p1) => params[p1] !== undefined ? params[p1] : resolvedDependencies[p1]);
-      try {
-        resolvedDependencies[key] = eval(resolvedValue);
-      } catch (error) {
-        console.error(`Error evaluating dependency: ${expr}`, error);
-        resolvedDependencies[key] = 0;
+      if (typeof expr === 'string') {
+        const resolvedValue = expr.replace(/\{(\w+)\}/g, (_, p1) => params[p1] !== undefined ? params[p1] : resolvedDependencies[p1]);
+        try {
+          resolvedDependencies[key] = new Function(...Object.keys(params), `return ${resolvedValue};`)(...Object.values(params));
+        } catch (error) {
+          console.error(`Error evaluating dependency: ${expr}`, error);
+          resolvedDependencies[key] = 0;
+        }
+      } else {
+        resolvedDependencies[key] = expr; // If expr is not a string, just assign it directly
       }
     }
     return resolvedDependencies;
   };
+  
 
   const processLoops = (svgContent, loops, params, resolvedDependencies) => {
     if (!loops) return svgContent;
